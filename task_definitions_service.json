@@ -19,16 +19,6 @@
         "awslogs-stream-prefix": "fargate",
         "mode": "non-blocking"
       }
-    },
-    "environment": [
-      {
-        "name": "EVENT_SERVICE_URL",
-        "value": "${event_service_url}"
-      },
-      {
-        "name": "EVENT_SERVICE_ARN",
-        "value": "${event_service_arn}"
-      }
-    ]
+    }
   }
 ]

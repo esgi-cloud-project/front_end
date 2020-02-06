@@ -75,14 +75,6 @@ resource "aws_iam_role_policy" "front_end_elastic_container" {
         ],
         "Resource": "*"
     },
-    {
-        "Effect": "Allow",
-        "Action": [
-            "sqs:ReceiveMessage",
-            "sqs:DeleteMessage"
-        ],
-        "Resource": "${var.sqs_arn}"
-    }
   ]
 }
 EOF
@@ -94,8 +86,6 @@ data "template_file" "front_end_task_definition_ecs" {
   vars = {
     app_port = var.app_port 
     image = "${aws_ecr_repository.front_end.repository_url}:latest"
-    event_service_url = var.sqs_id
-    event_service_arn = var.sqs_arn
   }
 }
 

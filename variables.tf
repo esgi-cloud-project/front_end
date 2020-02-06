@@ -21,13 +21,3 @@ variable "public_subnet_depends_on" {
   type    = any
   default = null
 }
-
-variable "sqs_id" {
-    type = string
-    description = "The sqs event queue use by the serverless function"
-}
-
-variable "sqs_arn" {
-    type = string
-    description = "The sqs event queue use by the serverless function"
-}
