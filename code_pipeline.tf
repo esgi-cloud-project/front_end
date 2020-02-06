@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "front_end_code_pipeline" {
-  bucket = "esgi-cloud-code-pipeline-2"
+  bucket = "esgi-cloud-code-pipeline-front"
   acl    = "private"
 }
 
