@@ -50,7 +50,7 @@ resource "aws_alb_target_group" "front_end" {
   vpc_id      = var.vpc.id
   target_type = "ip"
   health_check {
-    path = "/api"
+    path = "/"
     matcher = "200,404"
   }
 }
