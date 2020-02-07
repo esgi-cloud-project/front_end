@@ -74,7 +74,7 @@ resource "aws_iam_role_policy" "front_end_elastic_container" {
             "dynamodb:GetItem"
         ],
         "Resource": "*"
-    },
+    }
   ]
 }
 EOF

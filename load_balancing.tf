@@ -37,14 +37,14 @@ resource "aws_security_group" "front_end_ecs" {
 }
 
 resource "aws_alb" "front_end" {
-  name            = "cb-load-balancer"
+  name            = "cb-front-load-balancer"
   subnets         = aws_subnet.public.*.id
   security_groups = [aws_security_group.front_end_load_balancer.id]
   depends_on = [var.public_subnet_depends_on]
 }
 
 resource "aws_alb_target_group" "front_end" {
-  name        = "cb-target-group"
+  name        = "cb-front-target-group"
   port        = var.app_port
   protocol    = "HTTP"
   vpc_id      = var.vpc.id

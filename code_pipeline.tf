@@ -65,7 +65,7 @@ EOF
 }
 
 resource "aws_codepipeline" "front_end" {
-  name     = "esgi_cloud"
+  name     = "esgi_cloud_front"
   role_arn = "${aws_iam_role.front_end_code_pipeline.arn}"
 
   artifact_store {
